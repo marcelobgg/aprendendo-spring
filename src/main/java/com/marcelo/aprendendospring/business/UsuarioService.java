@@ -5,7 +5,6 @@ import com.marcelo.aprendendospring.infrastructure.exceptions.ConflictException;
 import com.marcelo.aprendendospring.infrastructure.exceptions.ResourceNotFoundException;
 import com.marcelo.aprendendospring.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,6 @@ public class UsuarioService {
 
     /*@Autowired
     private UsuarioRepository usuarioRepository;*/
-
     private final UsuarioRepository usuarioRepository; //"final" garante que os atributos não sejam modificados
     private final PasswordEncoder passwordEncoder; //declarado para usar o método do Spring Security que faz a criptografia da senha
 
