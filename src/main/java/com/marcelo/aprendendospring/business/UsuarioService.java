@@ -19,7 +19,7 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository; //"final" garante que os atributos não sejam modificados
     private final PasswordEncoder passwordEncoder; //declarado para usar o método do Spring Security que faz a criptografia da senha
 
-    public Usuario salvaUsuario(Usuario usuario) {
+    public Usuario salvarUsuario(Usuario usuario) {
         try {
             emailExiste(usuario.getEmail());
             usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
